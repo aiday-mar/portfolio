@@ -14,7 +14,7 @@ export default function Navbar() {
     return (
         <nav className="fixed top-0 z-50 w-full border-b border-purple-200/50 bg-white/80 backdrop-blur-md dark:border-purple-900/50 dark:bg-zinc-950/80">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-                <a href="#" className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white">
+                <a href="/" className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white">
                     {"<Portfolio />"}
                 </a>
 

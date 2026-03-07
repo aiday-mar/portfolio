@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="pt-20">
       <section className="px-6 pt-16 pb-6 text-center">
-        <h1 className="mb-3 text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+        <h1 className="mb-3 text-4xl font-bold tracking-tight text-purple-600">
           Hi!
         </h1>
         <p className="text-lg text-zinc-600 dark:text-zinc-400">
