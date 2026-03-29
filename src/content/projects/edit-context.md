@@ -9,7 +9,7 @@ tags:
 category: vscode
 ---
 
-The [EditContext API](https://developer.mozilla.org/en-US/docs/Web/API/EditContext_API) is a web platform API that allows applications to take full control of text input. Traditional web editors rely on hidden `contenteditable` elements or `<textarea>` hacks to receive input from the operating system — but these approaches are fragile and break down with complex input methods like Chinese/Japanese/Korean (CJK) IMEs, handwriting recognition, and speech-to-text. The EditContext API provides a direct bridge between the OS text input services and the application, enabling rich text editors like VS Code to handle composition events, selection, and text updates natively — without relying on DOM elements for input.
+The [EditContext API](https://developer.mozilla.org/en-US/docs/Web/API/EditContext_API) is a web platform API that allows applications to take full control of text input. Traditional web editors rely on hidden `contenteditable` elements or `<textarea>` hacks to receive input from the operating system — but these approaches are fragile and break down with complex input methods like Chinese/Japanese/Korean (CJK) IMEs, handwriting recognition, and speech-to-text. The EditContext API provides a direct bridge between the OS text input services and the application, enabling rich text editors like VS Code to handle composition events, selection, and text updates natively — without relying on DOM elements for input. I have adopted this EditContext API which has allowed us to fix numerous bugs as related notably to IME and accessibility. Following is a summary of the API.
 
 
 ```mermaid

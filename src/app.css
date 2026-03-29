@@ -24,3 +24,19 @@ body {
     color: var(--foreground);
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Inline code as pills */
+.prose :not(pre)>code {
+    background: rgba(139, 92, 246, 0.1);
+    color: #7c3aed;
+    padding: 0.15em 0.5em;
+    border-radius: 9999px;
+    font-size: 0.875em;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.prose :not(pre)>code::before,
+.prose :not(pre)>code::after {
+    content: none;
+}
