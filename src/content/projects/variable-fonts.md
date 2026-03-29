@@ -24,7 +24,7 @@ Before the work detailed in this section, VS Code only allowed one uniform font 
 }
 ```
 
-In the section that follows, I discuss how the variable line heights were implemented. 
+In the section that follows, I discuss how the variable line heights were implemented in the backend. 
 
 ## Line Heights Manager
 
