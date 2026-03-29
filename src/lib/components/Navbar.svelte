@@ -3,8 +3,6 @@
 
     const navLinks = [
         { href: "/projects", label: "All Projects" },
-        { href: "/#about", label: "About" },
-        { href: "/#skills", label: "Skills" },
     ];
 </script>
 

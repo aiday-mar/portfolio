@@ -23,15 +23,10 @@
             ></div>
         </div>
 
-        <p
-            class="mb-4 text-sm font-medium uppercase tracking-widest text-purple-400"
-        >
-            Welcome to my portfolio
-        </p>
         <h1
             class="mb-4 bg-gradient-to-r from-purple-500 via-fuchsia-500 to-indigo-500 bg-clip-text text-6xl font-extrabold tracking-tight text-transparent sm:text-7xl md:text-8xl"
         >
-            Hi!
+            Welcome!
         </h1>
         <p
             class="mb-2 text-2xl font-semibold text-zinc-800 dark:text-zinc-100 sm:text-3xl"
@@ -46,8 +41,9 @@
         </p>
 
         <!-- Scroll indicator -->
-        <div
-            class="absolute bottom-8 flex flex-col items-center gap-2 text-zinc-400 animate-bounce"
+        <button
+            onclick={() => document.getElementById('featured-projects')?.scrollIntoView({ behavior: 'smooth' })}
+            class="absolute bottom-8 flex cursor-pointer flex-col items-center gap-2 text-zinc-400 animate-bounce hover:text-purple-400 transition-colors"
         >
             <span class="text-xs tracking-wide uppercase">Scroll</span>
             <svg
@@ -64,9 +60,11 @@
                     d="M19 9l-7 7-7-7"
                 />
             </svg>
-        </div>
+        </button>
     </section>
-    <Projects projects={data.projects} />
+    <div id="featured-projects" class="scroll-mt-20">
+        <Projects projects={data.projects} />
+    </div>
     <About />
     <Skills />
 </main>
