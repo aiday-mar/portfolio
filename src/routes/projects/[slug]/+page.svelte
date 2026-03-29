@@ -1,6 +1,58 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+
     let { data } = $props();
     const Content = $derived(data.content);
+
+    let contentEl: HTMLElement;
+
+    onMount(() => {
+        renderMermaid();
+    });
+
+    async function renderMermaid() {
+        if (!contentEl) return;
+        const codeEls = contentEl.querySelectorAll('code.language-mermaid');
+        if (codeEls.length === 0) return;
+
+        const mermaid = (await import('mermaid')).default;
+        mermaid.initialize({
+            startOnLoad: false,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#ede9fe',
+                primaryTextColor: '#4c1d95',
+                primaryBorderColor: '#a78bfa',
+                lineColor: '#7c3aed',
+                secondaryColor: '#f3e8ff',
+                tertiaryColor: '#faf5ff',
+                fontFamily: 'ui-sans-serif, system-ui, sans-serif',
+                fontSize: '18px',
+                clusterBkg: '#f5f3ff',
+                clusterBorder: '#c4b5fd',
+                edgeLabelBackground: '#ffffff',
+                nodeTextColor: '#3b0764',
+            },
+            flowchart: {
+                padding: 20,
+                nodeSpacing: 60,
+                rankSpacing: 80,
+                useMaxWidth: true,
+            },
+        });
+
+        for (const codeEl of codeEls) {
+            const pre = codeEl.parentElement;
+            if (!pre) continue;
+            const text = codeEl.textContent ?? '';
+            const id = `mermaid-${crypto.randomUUID().slice(0, 8)}`;
+            const { svg } = await mermaid.render(id, text);
+            const div = document.createElement('div');
+            div.className = 'mermaid-diagram';
+            div.innerHTML = svg;
+            pre.replaceWith(div);
+        }
+    }
 </script>
 
 <svelte:head>
@@ -55,6 +107,7 @@
                 About This Project
             </h2>
             <div
+                bind:this={contentEl}
                 class="prose prose-zinc dark:prose-invert leading-relaxed text-zinc-600 dark:text-zinc-400"
             >
                 <Content />
@@ -63,6 +116,7 @@
 
         <!-- Links -->
         <div class="flex gap-4">
+
             <a
                 href={data.meta.link}
                 class="inline-flex h-10 items-center justify-center rounded-full bg-purple-600 px-6 text-sm font-medium text-white transition-colors hover:bg-purple-700"
@@ -78,3 +132,20 @@
         </div>
     </div>
 </main>
+
+<style>
+    :global(.mermaid-diagram) {
+        background: linear-gradient(135deg, #faf5ff, #f3e8ff, #ede9fe);
+        border: 1px solid #ddd6fe;
+        border-radius: 1rem;
+        padding: 2rem;
+        margin: 1.5rem 0;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0 4px 6px -1px rgb(139 92 246 / 0.1), 0 2px 4px -2px rgb(139 92 246 / 0.1);
+    }
+    :global(.mermaid-diagram svg) {
+        max-width: 100%;
+        height: auto;
+    }
+</style>

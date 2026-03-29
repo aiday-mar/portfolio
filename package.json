@@ -18,5 +18,8 @@
     "typescript": "^5",
     "vite": "^6"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "mermaid": "^11.13.0"
+  }
 }
