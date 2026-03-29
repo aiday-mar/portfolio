@@ -42,7 +42,10 @@
 
         <!-- Scroll indicator -->
         <button
-            onclick={() => document.getElementById('featured-projects')?.scrollIntoView({ behavior: 'smooth' })}
+            onclick={() =>
+                document
+                    .getElementById("featured-projects")
+                    ?.scrollIntoView({ behavior: "smooth" })}
             class="absolute bottom-8 flex cursor-pointer flex-col items-center gap-2 text-zinc-400 animate-bounce hover:text-purple-400 transition-colors"
         >
             <span class="text-xs tracking-wide uppercase">Scroll</span>

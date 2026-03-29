@@ -1,9 +1,7 @@
 <script lang="ts">
     let mobileOpen = $state(false);
 
-    const navLinks = [
-        { href: "/projects", label: "All Projects" },
-    ];
+    const navLinks = [{ href: "/projects", label: "All Projects" }];
 </script>
 
 <nav
