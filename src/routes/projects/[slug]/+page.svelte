@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+    import { onMount } from "svelte";
 
     let { data } = $props();
     const Content = $derived(data.content);
@@ -12,26 +12,26 @@
 
     async function renderMermaid() {
         if (!contentEl) return;
-        const codeEls = contentEl.querySelectorAll('code.language-mermaid');
+        const codeEls = contentEl.querySelectorAll("code.language-mermaid");
         if (codeEls.length === 0) return;
 
-        const mermaid = (await import('mermaid')).default;
+        const mermaid = (await import("mermaid")).default;
         mermaid.initialize({
             startOnLoad: false,
-            theme: 'base',
+            theme: "base",
             themeVariables: {
-                primaryColor: '#ede9fe',
-                primaryTextColor: '#4c1d95',
-                primaryBorderColor: '#a78bfa',
-                lineColor: '#7c3aed',
-                secondaryColor: '#f3e8ff',
-                tertiaryColor: '#faf5ff',
-                fontFamily: 'ui-sans-serif, system-ui, sans-serif',
-                fontSize: '18px',
-                clusterBkg: '#f5f3ff',
-                clusterBorder: '#c4b5fd',
-                edgeLabelBackground: '#ffffff',
-                nodeTextColor: '#3b0764',
+                primaryColor: "#ede9fe",
+                primaryTextColor: "#4c1d95",
+                primaryBorderColor: "#a78bfa",
+                lineColor: "#7c3aed",
+                secondaryColor: "#f3e8ff",
+                tertiaryColor: "#faf5ff",
+                fontFamily: "ui-sans-serif, system-ui, sans-serif",
+                fontSize: "18px",
+                clusterBkg: "#f5f3ff",
+                clusterBorder: "#c4b5fd",
+                edgeLabelBackground: "#ffffff",
+                nodeTextColor: "#3b0764",
             },
             flowchart: {
                 padding: 20,
@@ -44,11 +44,11 @@
         for (const codeEl of codeEls) {
             const pre = codeEl.parentElement;
             if (!pre) continue;
-            const text = codeEl.textContent ?? '';
+            const text = codeEl.textContent ?? "";
             const id = `mermaid-${crypto.randomUUID().slice(0, 8)}`;
             const { svg } = await mermaid.render(id, text);
-            const div = document.createElement('div');
-            div.className = 'mermaid-diagram';
+            const div = document.createElement("div");
+            div.className = "mermaid-diagram";
             div.innerHTML = svg;
             pre.replaceWith(div);
         }
@@ -88,24 +88,8 @@
             {/each}
         </div>
 
-        <!-- Image placeholder -->
-        <div
-            class="mb-10 h-64 overflow-hidden rounded-xl bg-gradient-to-br from-purple-50 to-fuchsia-50 dark:from-purple-900/20 dark:to-fuchsia-900/20"
-        >
-            <div
-                class="flex h-full items-center justify-center text-6xl text-purple-600/20 dark:text-purple-400/20"
-            >
-                {"</>"}
-            </div>
-        </div>
-
         <!-- Details (rendered from markdown) -->
         <div class="mb-10">
-            <h2
-                class="mb-4 text-xl font-semibold text-zinc-900 dark:text-white"
-            >
-                About This Project
-            </h2>
             <div
                 bind:this={contentEl}
                 class="prose prose-zinc dark:prose-invert leading-relaxed text-zinc-600 dark:text-zinc-400"
@@ -115,21 +99,26 @@
         </div>
 
         <!-- Links -->
-        <div class="flex gap-4">
-
-            <a
-                href={data.meta.link}
-                class="inline-flex h-10 items-center justify-center rounded-full bg-purple-600 px-6 text-sm font-medium text-white transition-colors hover:bg-purple-700"
-            >
-                Live Demo
-            </a>
-            <a
-                href={data.meta.github}
-                class="inline-flex h-10 items-center justify-center rounded-full border border-purple-300 px-6 text-sm font-medium text-purple-900 transition-colors hover:bg-purple-50 dark:border-purple-700 dark:text-purple-200 dark:hover:bg-purple-900/30"
-            >
-                GitHub
-            </a>
-        </div>
+        {#if data.meta.link || data.meta.github}
+            <div class="flex gap-4">
+                {#if data.meta.link}
+                    <a
+                        href={data.meta.link}
+                        class="inline-flex h-10 items-center justify-center rounded-full bg-purple-600 px-6 text-sm font-medium text-white transition-colors hover:bg-purple-700"
+                    >
+                        Live Demo
+                    </a>
+                {/if}
+                {#if data.meta.github}
+                    <a
+                        href={data.meta.github}
+                        class="inline-flex h-10 items-center justify-center rounded-full border border-purple-300 px-6 text-sm font-medium text-purple-900 transition-colors hover:bg-purple-50 dark:border-purple-700 dark:text-purple-200 dark:hover:bg-purple-900/30"
+                    >
+                        GitHub
+                    </a>
+                {/if}
+            </div>
+        {/if}
     </div>
 </main>
 
@@ -142,7 +131,9 @@
         margin: 1.5rem 0;
         display: flex;
         justify-content: center;
-        box-shadow: 0 4px 6px -1px rgb(139 92 246 / 0.1), 0 2px 4px -2px rgb(139 92 246 / 0.1);
+        box-shadow:
+            0 4px 6px -1px rgb(139 92 246 / 0.1),
+            0 2px 4px -2px rgb(139 92 246 / 0.1);
     }
     :global(.mermaid-diagram svg) {
         max-width: 100%;

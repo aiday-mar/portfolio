@@ -8,16 +8,6 @@
     href="/projects/{project.slug}"
     class="group block rounded-xl border border-purple-200/50 bg-white/80 p-6 transition-shadow hover:shadow-lg hover:shadow-purple-200/30 dark:border-purple-800/50 dark:bg-zinc-950/80"
 >
-    <div
-        class="mb-4 h-48 overflow-hidden rounded-lg bg-gradient-to-br from-purple-50 to-fuchsia-50 dark:from-purple-900/20 dark:to-fuchsia-900/20"
-    >
-        <div
-            class="flex h-full items-center justify-center text-4xl text-purple-600/30 dark:text-purple-400/30"
-        >
-            {"</>"}
-        </div>
-    </div>
-
     <h3 class="mb-2 text-xl font-semibold text-zinc-900 dark:text-white">
         {project.title}
     </h3>
