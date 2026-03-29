@@ -1,87 +1,87 @@
 export interface Project {
-	title: string;
-	slug: string;
-	description: string;
-	details: string;
-	tags: string[];
-	link: string;
-	github: string;
-	category: 'vscode' | 'personal';
+    title: string;
+    slug: string;
+    description: string;
+    details: string;
+    tags: string[];
+    link: string;
+    github: string;
+    category: 'vscode' | 'personal';
 }
 
 export const projects: Project[] = [
-	{
-		title: 'E-Commerce Platform',
-		slug: 'e-commerce-platform',
-		description:
-			'A full-stack e-commerce application with product management, cart functionality, and payment integration.',
-		details:
-			'Built a complete e-commerce solution from scratch using Next.js and TypeScript. The platform features a product catalog with search and filtering, a shopping cart with real-time updates, user authentication, and Stripe payment integration. The admin dashboard allows managing products, orders, and customer data. Implemented server-side rendering for SEO optimization and used Tailwind CSS for a responsive, modern UI.',
-		tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Stripe'],
-		link: '#',
-		github: '#',
-		category: 'personal'
-	},
-	{
-		title: 'Task Management App',
-		slug: 'task-management-app',
-		description:
-			'A collaborative task management tool with real-time updates, drag-and-drop, and team workspaces.',
-		details:
-			'Developed a Trello-inspired task management application with real-time collaboration features. Users can create workspaces, organize tasks into boards and columns, and drag-and-drop tasks between stages. Built with React on the frontend and Node.js with MongoDB on the backend. Socket.io enables real-time updates so team members see changes instantly. Features include task assignments, due dates, labels, comments, and activity logging.',
-		tags: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
-		link: '#',
-		github: '#',
-		category: 'personal'
-	},
-	{
-		title: 'Weather Dashboard',
-		slug: 'weather-dashboard',
-		description:
-			'A responsive weather dashboard that displays forecasts, maps, and historical weather data for any location.',
-		details:
-			'Created an interactive weather dashboard that fetches data from multiple weather APIs. Users can search for any location and view current conditions, hourly forecasts, and 7-day predictions. Features include interactive weather maps, historical data charts built with Chart.js, and saved favorite locations. The app is fully responsive and includes both light and dark themes with smooth animations.',
-		tags: ['React', 'REST API', 'Chart.js', 'Tailwind CSS'],
-		link: '#',
-		github: '#',
-		category: 'personal'
-	},
-	{
-		title: 'Blog Platform',
-		slug: 'blog-platform',
-		description:
-			'A markdown-based blog platform with syntax highlighting, SEO optimization, and a custom CMS.',
-		details:
-			'Built a developer-focused blog platform using Next.js and MDX for rich markdown content with embedded React components. Features include syntax highlighting for code blocks, automatic table of contents generation, SEO metadata management, and a custom content management system backed by Prisma and PostgreSQL. The platform supports draft/published states, tags, and full-text search.',
-		tags: ['Next.js', 'MDX', 'Prisma', 'PostgreSQL'],
-		link: '#',
-		github: '#',
-		category: 'vscode'
-	},
-	{
-		title: 'Chat Application',
-		slug: 'chat-application',
-		description:
-			'A real-time messaging app with group chats, file sharing, and end-to-end encryption.',
-		details:
-			'Developed a full-featured chat application with React and Firebase. Supports one-on-one and group conversations, file and image sharing, read receipts, and typing indicators. Implemented WebRTC for voice and video calls. The app uses Firebase Authentication for user management and Firestore for real-time message syncing. Styled with Tailwind CSS for a clean, responsive interface across all devices.',
-		tags: ['React', 'Firebase', 'WebRTC', 'Tailwind CSS'],
-		link: '#',
-		github: '#',
-		category: 'vscode'
-	},
-	{
-		title: 'Analytics Dashboard',
-		slug: 'analytics-dashboard',
-		description:
-			'An interactive analytics dashboard with custom charts, data filtering, and CSV/PDF export functionality.',
-		details:
-			'Created a comprehensive analytics dashboard for visualizing business metrics. Built with Next.js and D3.js for highly customizable, interactive charts including line graphs, bar charts, pie charts, and heatmaps. Users can filter data by date range, category, and custom dimensions. Supports exporting reports as CSV or PDF. The backend uses PostgreSQL for data storage and Redis for caching frequently accessed queries.',
-		tags: ['Next.js', 'D3.js', 'PostgreSQL', 'Redis'],
-		link: '#',
-		github: '#',
-		category: 'vscode'
-	}
+    {
+        title: 'E-Commerce Platform',
+        slug: 'e-commerce-platform',
+        description:
+            'A full-stack e-commerce application with product management, cart functionality, and payment integration.',
+        details:
+            'Built a complete e-commerce solution from scratch using Next.js and TypeScript. The platform features a product catalog with search and filtering, a shopping cart with real-time updates, user authentication, and Stripe payment integration. The admin dashboard allows managing products, orders, and customer data. Implemented server-side rendering for SEO optimization and used Tailwind CSS for a responsive, modern UI.',
+        tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Stripe'],
+        link: '#',
+        github: '#',
+        category: 'personal'
+    },
+    {
+        title: 'Task Management App',
+        slug: 'task-management-app',
+        description:
+            'A collaborative task management tool with real-time updates, drag-and-drop, and team workspaces.',
+        details:
+            'Developed a Trello-inspired task management application with real-time collaboration features. Users can create workspaces, organize tasks into boards and columns, and drag-and-drop tasks between stages. Built with React on the frontend and Node.js with MongoDB on the backend. Socket.io enables real-time updates so team members see changes instantly. Features include task assignments, due dates, labels, comments, and activity logging.',
+        tags: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
+        link: '#',
+        github: '#',
+        category: 'personal'
+    },
+    {
+        title: 'Weather Dashboard',
+        slug: 'weather-dashboard',
+        description:
+            'A responsive weather dashboard that displays forecasts, maps, and historical weather data for any location.',
+        details:
+            'Created an interactive weather dashboard that fetches data from multiple weather APIs. Users can search for any location and view current conditions, hourly forecasts, and 7-day predictions. Features include interactive weather maps, historical data charts built with Chart.js, and saved favorite locations. The app is fully responsive and includes both light and dark themes with smooth animations.',
+        tags: ['React', 'REST API', 'Chart.js', 'Tailwind CSS'],
+        link: '#',
+        github: '#',
+        category: 'personal'
+    },
+    {
+        title: 'Blog Platform',
+        slug: 'blog-platform',
+        description:
+            'A markdown-based blog platform with syntax highlighting, SEO optimization, and a custom CMS.',
+        details:
+            'Built a developer-focused blog platform using Next.js and MDX for rich markdown content with embedded React components. Features include syntax highlighting for code blocks, automatic table of contents generation, SEO metadata management, and a custom content management system backed by Prisma and PostgreSQL. The platform supports draft/published states, tags, and full-text search.',
+        tags: ['Next.js', 'MDX', 'Prisma', 'PostgreSQL'],
+        link: '#',
+        github: '#',
+        category: 'vscode'
+    },
+    {
+        title: 'Chat Application',
+        slug: 'chat-application',
+        description:
+            'A real-time messaging app with group chats, file sharing, and end-to-end encryption.',
+        details:
+            'Developed a full-featured chat application with React and Firebase. Supports one-on-one and group conversations, file and image sharing, read receipts, and typing indicators. Implemented WebRTC for voice and video calls. The app uses Firebase Authentication for user management and Firestore for real-time message syncing. Styled with Tailwind CSS for a clean, responsive interface across all devices.',
+        tags: ['React', 'Firebase', 'WebRTC', 'Tailwind CSS'],
+        link: '#',
+        github: '#',
+        category: 'vscode'
+    },
+    {
+        title: 'Analytics Dashboard',
+        slug: 'analytics-dashboard',
+        description:
+            'An interactive analytics dashboard with custom charts, data filtering, and CSV/PDF export functionality.',
+        details:
+            'Created a comprehensive analytics dashboard for visualizing business metrics. Built with Next.js and D3.js for highly customizable, interactive charts including line graphs, bar charts, pie charts, and heatmaps. Users can filter data by date range, category, and custom dimensions. Supports exporting reports as CSV or PDF. The backend uses PostgreSQL for data storage and Redis for caching frequently accessed queries.',
+        tags: ['Next.js', 'D3.js', 'PostgreSQL', 'Redis'],
+        link: '#',
+        github: '#',
+        category: 'vscode'
+    }
 ];
 
 export const vscodeProjects = projects.filter((p) => p.category === 'vscode');
