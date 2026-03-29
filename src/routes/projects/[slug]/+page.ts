@@ -1,13 +1,13 @@
-import { projects } from '$lib/data/projects';
+import { loadProject } from '$lib/data/projects';
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = ({ params }) => {
-    const project = projects.find((p) => p.slug === params.slug);
+export const load: PageLoad = async ({ params }) => {
+    const entry = await loadProject(params.slug);
 
-    if (!project) {
+    if (!entry) {
         error(404, 'Project not found');
     }
 
-    return { project };
+    return { meta: entry.meta, content: entry.content };
 };

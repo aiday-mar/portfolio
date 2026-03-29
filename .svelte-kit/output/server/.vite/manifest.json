@@ -124,8 +124,16 @@
     "isEntry": true,
     "imports": [
       "_index.js",
-      "_projects.js",
       "_ProjectCard.js"
+    ]
+  },
+  "src/routes/+page.ts": {
+    "file": "entries/pages/_page.ts.js",
+    "name": "entries/pages/_page.ts",
+    "src": "src/routes/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "_projects.js"
     ]
   },
   "src/routes/projects/+page.svelte": {
@@ -135,8 +143,16 @@
     "isEntry": true,
     "imports": [
       "_index.js",
-      "_projects.js",
       "_ProjectCard.js"
+    ]
+  },
+  "src/routes/projects/+page.ts": {
+    "file": "entries/pages/projects/_page.ts.js",
+    "name": "entries/pages/projects/_page.ts",
+    "src": "src/routes/projects/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "_projects.js"
     ]
   },
   "src/routes/projects/[slug]/+page.svelte": {

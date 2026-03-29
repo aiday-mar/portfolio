@@ -2,7 +2,7 @@ import { e as ensure_array_like, a as attr, b as escape_html, h as head } from "
 import "clsx";
 function Navbar($$renderer) {
   const navLinks = [
-    { href: "/projects", label: "Projects" },
+    { href: "/projects", label: "All Projects" },
     { href: "/#about", label: "About" },
     { href: "/#skills", label: "Skills" }
   ];

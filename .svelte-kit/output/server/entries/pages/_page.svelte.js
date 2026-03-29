@@ -1,6 +1,5 @@
 import "clsx";
 import { e as ensure_array_like, b as escape_html } from "../../chunks/index.js";
-import { p as projects } from "../../chunks/projects.js";
 import { P as ProjectCard } from "../../chunks/ProjectCard.js";
 function About($$renderer) {
   $$renderer.push(`<section id="about" class="px-6 py-24"><div class="mx-auto max-w-6xl"><h2 class="mb-4 text-center text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">About Me</h2> <div class="mx-auto mb-12 h-1 w-12 rounded bg-purple-600"></div> <div class="grid gap-12 md:grid-cols-2"><div class="flex items-center justify-center"><div class="h-80 w-80 overflow-hidden rounded-2xl bg-gradient-to-br from-purple-100 to-fuchsia-100 dark:from-purple-900/30 dark:to-fuchsia-900/30"><div class="flex h-full items-center justify-center text-6xl text-purple-600/50 dark:text-purple-400/50">&lt;/></div></div></div> <div class="flex flex-col justify-center"><h3 class="mb-4 text-xl font-semibold text-zinc-900 dark:text-white">A developer who loves building things</h3> <p class="mb-4 leading-relaxed text-zinc-600 dark:text-zinc-400">I'm a software developer with a passion for building web applications that are
@@ -10,6 +9,7 @@ function About($$renderer) {
 }
 function Projects($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
+    let { projects } = $$props;
     const PREVIEW_COUNT = 4;
     const previewProjects = projects.slice(0, PREVIEW_COUNT);
     $$renderer2.push(`<section id="projects" class="bg-zinc-50 px-6 pt-12 pb-24 dark:bg-zinc-900/50"><div class="mx-auto max-w-6xl"><h2 class="mb-4 text-center text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">Projects</h2> <div class="mx-auto mb-12 h-1 w-12 rounded bg-purple-600"></div> <div class="grid gap-8 md:grid-cols-2"><!--[-->`);
@@ -71,14 +71,17 @@ function Skills($$renderer) {
   }
   $$renderer.push(`<!--]--></div></div></section>`);
 }
-function _page($$renderer) {
-  $$renderer.push(`<main class="pt-20"><section class="px-6 pt-16 pb-6 text-center"><h1 class="mb-3 text-4xl font-bold tracking-tight text-purple-600">Hi!</h1> <p class="text-lg text-zinc-600 dark:text-zinc-400">My name is Aiday Marlen Kyzy. Welcome to my portfolio!</p></section> `);
-  Projects($$renderer);
-  $$renderer.push(`<!----> `);
-  About($$renderer);
-  $$renderer.push(`<!----> `);
-  Skills($$renderer);
-  $$renderer.push(`<!----></main>`);
+function _page($$renderer, $$props) {
+  $$renderer.component(($$renderer2) => {
+    let { data } = $$props;
+    $$renderer2.push(`<main class="pt-20"><section class="px-6 pt-16 pb-6 text-center"><h1 class="mb-3 text-4xl font-bold tracking-tight text-purple-600">Hi!</h1> <p class="text-lg text-zinc-600 dark:text-zinc-400">My name is Aiday Marlen Kyzy. Welcome to my portfolio!</p></section> `);
+    Projects($$renderer2, { projects: data.projects });
+    $$renderer2.push(`<!----> `);
+    About($$renderer2);
+    $$renderer2.push(`<!----> `);
+    Skills($$renderer2);
+    $$renderer2.push(`<!----></main>`);
+  });
 }
 export {
   _page as default

@@ -2,7 +2,7 @@
 	let mobileOpen = $state(false);
 
 	const navLinks = [
-		{ href: '/projects', label: 'Projects' },
+		{ href: '/projects', label: 'All Projects' },
 		{ href: '/#about', label: 'About' },
 		{ href: '/#skills', label: 'Skills' }
 	];

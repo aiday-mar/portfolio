@@ -1,11 +1,11 @@
-import { p as projects } from "../../../../chunks/projects.js";
+import { a as loadProject } from "../../../../chunks/projects.js";
 import { error } from "@sveltejs/kit";
-const load = ({ params }) => {
-  const project = projects.find((p) => p.slug === params.slug);
-  if (!project) {
+const load = async ({ params }) => {
+  const entry = await loadProject(params.slug);
+  if (!entry) {
     error(404, "Project not found");
   }
-  return { project };
+  return { meta: entry.meta, content: entry.content };
 };
 export {
   load

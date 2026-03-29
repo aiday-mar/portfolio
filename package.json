@@ -12,6 +12,7 @@
     "@sveltejs/kit": "^2",
     "@sveltejs/vite-plugin-svelte": "^5",
     "@tailwindcss/vite": "^4",
+    "mdsvex": "^0.12.7",
     "svelte": "^5",
     "tailwindcss": "^4",
     "typescript": "^5",

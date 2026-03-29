@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Project } from '$lib/data/projects';
+	import type { ProjectMeta } from '$lib/data/projects';
 
-	let { project }: { project: Project } = $props();
+	let { project }: { project: ProjectMeta } = $props();
 </script>
 
 <a

@@ -2,6 +2,8 @@
 	import About from '$lib/components/About.svelte';
 	import Projects from '$lib/components/Projects.svelte';
 	import Skills from '$lib/components/Skills.svelte';
+
+	let { data } = $props();
 </script>
 
 <main class="pt-20">
@@ -11,7 +13,7 @@
 			My name is Aiday Marlen Kyzy. Welcome to my portfolio!
 		</p>
 	</section>
-	<Projects />
+	<Projects projects={data.projects} />
 	<About />
 	<Skills />
 </main>

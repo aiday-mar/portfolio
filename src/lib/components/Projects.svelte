@@ -1,9 +1,11 @@
 <script lang="ts">
-	import { projects } from '$lib/data/projects';
+	import type { ProjectMeta } from '$lib/data/projects';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 
+	let { projects }: { projects: ProjectMeta[] } = $props();
+
 	const PREVIEW_COUNT = 4;
-	const previewProjects = projects.slice(0, PREVIEW_COUNT);
+	const previewProjects = $derived(projects.slice(0, PREVIEW_COUNT));
 </script>
 
 <section id="projects" class="bg-zinc-50 px-6 pt-12 pb-24 dark:bg-zinc-900/50">

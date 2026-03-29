@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { vscodeProjects, personalProjects } from '$lib/data/projects';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
+
+	let { data } = $props();
 </script>
 
 <svelte:head>
@@ -32,7 +33,7 @@
 		</h2>
 		<div class="mx-auto mb-8 ml-0 mr-auto h-1 w-12 rounded bg-purple-600"></div>
 		<div class="mb-20 grid gap-8 md:grid-cols-2">
-			{#each vscodeProjects as project}
+			{#each data.vscodeProjects as project}
 				<ProjectCard {project} />
 			{/each}
 		</div>
@@ -43,7 +44,7 @@
 		</h2>
 		<div class="mx-auto mb-8 ml-0 mr-auto h-1 w-12 rounded bg-purple-600"></div>
 		<div class="grid gap-8 md:grid-cols-2">
-			{#each personalProjects as project}
+			{#each data.personalProjects as project}
 				<ProjectCard {project} />
 			{/each}
 		</div>
