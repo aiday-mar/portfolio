@@ -13,7 +13,7 @@
         <h2
             class="mb-4 text-center text-3xl font-bold tracking-tight text-zinc-900 dark:text-white"
         >
-            Projects
+            Featured Projects
         </h2>
         <div class="mx-auto mb-12 h-1 w-12 rounded bg-purple-600"></div>
 

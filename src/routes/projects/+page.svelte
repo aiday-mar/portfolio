@@ -25,9 +25,6 @@
         >
             All Projects
         </h1>
-        <p class="mb-16 text-zinc-600 dark:text-zinc-400">
-            A collection of all my work and side projects.
-        </p>
 
         <!-- VS Code Work -->
         <h2
