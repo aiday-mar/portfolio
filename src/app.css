@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@import "prism-themes/themes/prism-material-light.css";
+
 :root {
     --background: #ffffff;
     --foreground: #171717;

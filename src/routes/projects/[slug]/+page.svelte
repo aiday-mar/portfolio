@@ -92,7 +92,7 @@
         <div class="mb-10">
             <div
                 bind:this={contentEl}
-                class="prose prose-zinc dark:prose-invert leading-relaxed text-zinc-600 dark:text-zinc-400"
+                class="prose prose-zinc prose-lg max-w-none dark:prose-invert leading-relaxed text-zinc-600 dark:text-zinc-400"
             >
                 <Content />
             </div>
