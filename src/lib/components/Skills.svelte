@@ -2,22 +2,15 @@
 	const skillCategories = [
 		{
 			title: "Frontend",
-			skills: [
-				"React",
-				"Svelte",
-				"TypeScript",
-				"Tailwind CSS",
-				"HTML/CSS",
-				"JavaScript",
-			],
+			skills: ["React", "Svelte", "TypeScript", "HTML/CSS", "JavaScript"],
 		},
 		{
 			title: "Backend",
-			skills: ["Node.js", "Express", "Python", "REST APIs"],
+			skills: ["Node.js", "Express", "Python"],
 		},
 		{
 			title: "Tools & DevOps",
-			skills: ["Git", "Docker", "CI/CD", "Azure", "Vercel", "Linux"],
+			skills: ["Git", "Docker", "Azure", "Vercel", "Linux"],
 		},
 	];
 </script>
