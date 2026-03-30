@@ -29,17 +29,14 @@
 				<p
 					class="mb-4 leading-relaxed text-zinc-600 dark:text-zinc-400"
 				>
-					I'm a software developer with a passion for building web
-					applications that are both beautiful and functional. I enjoy
-					working across the full stack, from crafting pixel-perfect
-					UIs to designing robust APIs.
+					I'm a software developer with a passion for building
+					applications that are both beautiful and functional.
 				</p>
 				<p
 					class="mb-6 leading-relaxed text-zinc-600 dark:text-zinc-400"
 				>
 					When I'm not coding, you can find me exploring new
-					technologies, contributing to open source, or learning about
-					system design.
+					technologies and reading books.
 				</p>
 
 				<div class="grid grid-cols-2 gap-4">
