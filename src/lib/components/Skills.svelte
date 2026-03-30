@@ -1,17 +1,24 @@
 <script lang="ts">
 	const skillCategories = [
 		{
-			title: 'Frontend',
-			skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML/CSS', 'JavaScript']
+			title: "Frontend",
+			skills: [
+				"React",
+				"Svelte",
+				"TypeScript",
+				"Tailwind CSS",
+				"HTML/CSS",
+				"JavaScript",
+			],
 		},
 		{
-			title: 'Backend',
-			skills: ['Node.js', 'Express', 'Python', 'REST APIs', 'GraphQL', 'PostgreSQL']
+			title: "Backend",
+			skills: ["Node.js", "Express", "Python", "REST APIs"],
 		},
 		{
-			title: 'Tools & DevOps',
-			skills: ['Git', 'Docker', 'CI/CD', 'AWS', 'Vercel', 'Linux']
-		}
+			title: "Tools & DevOps",
+			skills: ["Git", "Docker", "CI/CD", "Azure", "Vercel", "Linux"],
+		},
 	];
 </script>
 
@@ -26,8 +33,12 @@
 
 		<div class="grid gap-8 md:grid-cols-3">
 			{#each skillCategories as category}
-				<div class="rounded-xl border border-purple-200/50 p-6 dark:border-purple-800/50">
-					<h3 class="mb-4 text-lg font-semibold text-zinc-900 dark:text-white">
+				<div
+					class="rounded-xl border border-purple-200/50 p-6 dark:border-purple-800/50"
+				>
+					<h3
+						class="mb-4 text-lg font-semibold text-zinc-900 dark:text-white"
+					>
 						{category.title}
 					</h3>
 					<div class="flex flex-wrap gap-2">
