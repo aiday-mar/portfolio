@@ -36,8 +36,7 @@
         <p
             class="max-w-xl text-lg leading-relaxed text-zinc-500 dark:text-zinc-400"
         >
-            Software developer crafting beautiful &amp; functional web
-            experiences.
+            Software developer crafting functional web experiences.
         </p>
 
         <!-- Scroll indicator -->

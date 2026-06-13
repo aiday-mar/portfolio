@@ -29,8 +29,7 @@
 				<p
 					class="mb-4 leading-relaxed text-zinc-600 dark:text-zinc-400"
 				>
-					I'm a software developer with a passion for building
-					applications that are both beautiful and functional.
+					I'm a software developer with a passion for building functional applications.
 				</p>
 				<p
 					class="mb-6 leading-relaxed text-zinc-600 dark:text-zinc-400"
@@ -51,7 +50,7 @@
 					<div
 						class="rounded-lg border border-purple-200/50 p-4 dark:border-purple-800/50"
 					>
-						<p class="text-2xl font-bold text-purple-600">20+</p>
+						<p class="text-2xl font-bold text-purple-600">10+</p>
 						<p class="text-sm text-zinc-600 dark:text-zinc-400">
 							Projects Completed
 						</p>

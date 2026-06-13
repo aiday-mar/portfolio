@@ -6,7 +6,7 @@
 		},
 		{
 			title: "Backend",
-			skills: ["Node.js", "Express", "Python"],
+			skills: ["Node.js", "Esbuild", "Python"],
 		},
 		{
 			title: "Tools & DevOps",
