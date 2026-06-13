@@ -1,6 +1,7 @@
 <script lang="ts">
     import "../app.css";
     import { beforeNavigate } from "$app/navigation";
+    import { Analytics } from "@vercel/analytics/svelte";
     import Navbar from "$lib/components/Navbar.svelte";
     import Footer from "$lib/components/Footer.svelte";
 
@@ -23,5 +24,6 @@
 </svelte:head>
 
 <Navbar />
+<Analytics />
 {@render children()}
 <Footer />
