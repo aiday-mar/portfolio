@@ -1,7 +1,7 @@
 <script lang="ts">
     import "../app.css";
     import { beforeNavigate } from "$app/navigation";
-    import { Analytics } from "@vercel/analytics/svelte";
+    import { inject } from "@vercel/analytics";
     import Navbar from "$lib/components/Navbar.svelte";
     import Footer from "$lib/components/Footer.svelte";
 
@@ -13,6 +13,8 @@
             document.documentElement.style.scrollBehavior = "";
         });
     });
+
+    inject();
 </script>
 
 <svelte:head>
@@ -24,6 +26,5 @@
 </svelte:head>
 
 <Navbar />
-<Analytics />
 {@render children()}
 <Footer />
