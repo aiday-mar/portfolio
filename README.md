@@ -1,6 +1,6 @@
 # Aiday Marlen Kyzy — Portfolio
 
-**Live site:** [portfolio-aidays-projects.vercel.app](https://portfolio-aidays-projects.vercel.app)
+**Live site:** [https://aidaymarlenkyzy.io/](https://aidaymarlenkyzy.io/)
 
 ## Getting Started
 
