@@ -6,7 +6,6 @@ tags:
   - TypeScript
   - Obsidian
   - Developer Tools
-link: 'https://community.obsidian.md/plugins/code-style-keys-'
 github: 'https://github.com/aiday-mar/code-style-keys'
 category: personal
 ---
@@ -22,4 +21,4 @@ My goal was to make Obsidian feel more like a code editor for developer document
 ## Link
 
 You can find the plugin here:
-[Code Style Keys on Obsidian Community Plugins](https://community.obsidian.md/plugins/code-style-keys-)
+[Code Style Keys on Obsidian Community Plugins](https://community.obsidian.md/plugins/code-style-keys)
